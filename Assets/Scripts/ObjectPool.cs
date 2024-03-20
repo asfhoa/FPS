@@ -15,7 +15,7 @@ public class ObjectPool<T> where T : Component, IReturnPool<T>
     public void Setup(GameObject owner, T prefab, int initCount)
     {
         this.prefab = prefab;
-        pool = new UnityEngine.Pool.ObjectPool<T>(Create, OnTakeFromPool, OnReleaseToPool, OnDestroyObject, true, initCount);   //생성,내보내기,들여오기,삭제,true,최대용량
+        pool = new UnityEngine.Pool.ObjectPool<T>(Create, OnTakeFromPool, OnReleaseToPool, OnDestroyObject, true, initCount);
         parent = new GameObject("pool storage").transform;
         parent.SetParent(owner.transform);
     }
