@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7709108372637400342}
   - component: {fileID: 2976533905667319411}
-  - component: {fileID: 1569945838796963022}
   - component: {fileID: 9059824186876293328}
+  - component: {fileID: 6848027135302004257}
   m_Layer: 11
   m_Name: PillProjectile
   m_TagString: Untagged
@@ -62,29 +62,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!136 &1569945838796963022
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941033589302190195}
-  m_Material: {fileID: 13400000, guid: 97efb429506bf91448b128ca0cca5245, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.04
-  m_Height: 0.15
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9059824186876293328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,9 +74,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68e65e825a56e04eaa2d55179a0a1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToDestroyed: 3
+  TimeToDestroyed: 1
   hitVfx: {fileID: 198856239026640498, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
   explodeRange: 5
+  explodePower: 600
+--- !u!135 &6848027135302004257
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941033589302190195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4436639427923039766
 PrefabInstance:
   m_ObjectHideFlags: 0
